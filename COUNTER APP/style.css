@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap');
+
+
+*, /* THE "*" MEANS ALL ELEMENTS (UNIVERSAL SELECTOR), SO WE ARE SETTING ALL ELEMENTS TO HAVE ZERO MARGINS, AND ZERO PADDING, THUS MAKING THEM LOOK THE SAME IN ALL BROWSERS */
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: dark light;
+    background-color: bisque;
+}
+
+body {
+    margin: 0; 
+}
+
+img {
+    width: 100%;
+}
+
+
+.container { /* THIS CLASS ("CONTAINER" CONTROLS THE CONTENT AS A WHOLE). CLASSES ALLOW CSS AND JAVASCRIPT TO SELECT AND ACCESS SPECIFIC ELEMENTS VIA THE CLASS SELECTORS OR FUNCTIONS LIKE THE DOM(DOCUMENT OBJECT MODEL) METHOD DOCUMENT. */
+    
+    max-width: 900px; /* THE MAX-WIDTH PROPERTY DEFINES THE MAXIMUM WIDTH OF AN ELEMENT. IF THE CONTENT IS LARGER THAN THE MAXMUM WIDTH, IT WILL AUTOMATICALLY CHANGE THE HEIGHT OF THE ELEMENT. IF THE CONTENT IS SMALLER THAN THE MAXIMUM WIDTH, THE MAX-WIDTH PROPERTY HAS NO EFFECT. */ 
+    
+    height: 100vh; /* VIEWPORT HEIGHT, IT WORKS LIKE THE PERCENTAGE UNIT AS WELL. SPECIFYING 10VH IS EQUIVALENT TO OCCUPYING 10% OF ENTIRE VISIBLE SCREEN HEIGHT. */
+    margin: 0 auto; 
+    padding: 0 20px; 
+    display: flex;
+    
+    justify-content: center; /* THE JUSTIFY-CONTENT PROPERTY ALIGNS THE FLEXIBLE CONTAINER'S ITEMS WHEN THE ITEMS DO USE ALL AVAILABLE SPACE ON THE MAIN-AXIS (HORIZONTALLY). TIP: USE THE ALIGN-ITEMS PROPERTY TO ALIGN THE ITEMS VERTICALLY. */
+    align-items: center;
+}
+
+.counter-div {
+    width: 40rem; /* "THE ROOT ELEMENT'S FONT-SIZE" */
+    border: 2px solid black; 
+    padding: 1rem;
+    background-color: rgb(137, 137, 207);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.counter-div > * { /* (> SIGN) IT WILL TARGET ELEMENTS WHICH ARE DIRECT CHILDREN OF A PARTICULAR ELEMENT. */
+    
+    margin-bottom: 1rem; /* THIS CAUSED THE COUNTER APP TO LIFT 1 REM FROM THE OTHER ELEMENTS WITHIN THE CONTAINER */
+    
+    margin-top: 1rem;
+}
+
+h1 {
+    text-align: left;
+    background-color: black;
+    color: whitesmoke; 
+    margin: 0;
+    width: auto; 
+    height: auto;  
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+#count { /* NOW, WE ARE TARGETING THE "COUNT" CLASS LOCATED IN HTML */
+    
+    font-size: 3rem; 
+}
+
+.buttons button {
+    padding: 1rem; 
+    margin: 0 1rem; 
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+button.subtract {
+    background-color:red;
+}
+
+button.reset {
+    background-color: black;
+}
+
+button.add {
+    background-color: green;
+}
+
